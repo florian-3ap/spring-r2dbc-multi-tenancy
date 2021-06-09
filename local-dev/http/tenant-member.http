@@ -1,0 +1,4 @@
+## Get members for specific tenant
+GET http://localhost:8080/tenant-member
+Content-Type: application/json; charset=utf-8
+tenant_id: tenant1

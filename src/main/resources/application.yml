@@ -1,0 +1,17 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/tenantdb
+    username: admin
+    password: admin
+  flyway:
+    enabled: false
+    url: jdbc:postgresql://localhost:5432/tenantdb
+    user: ${spring.r2dbc.username}
+    password: ${spring.r2dbc.password}
+    locations:
+      - classpath:db/migration/
+    baseline-version: 0
+    baseline-on-migrate: true
+
+tenants:
+  names: TENANT1, TENANT2, TENANT3
